@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes <%= pokemon.name %></title>
+</head>
+<body>
+    <h1>Detalhes <%= pokemon.name %></h1>
+    <p>Altura: <%= pokemon.height %> decimetros</p>
+    <p>Peso: <%= pokemon.weight %> hectogramas</p>
+    <p>Experiência Básica: <%= pokemon.base_experience %></p>
+    <p>Habilidades</p>
+    <ul>
+        <% abilities.forEach(ability => { %>
+            <li>
+                <strong><%= ability.name %></strong>: <%= ability.effect_entries[0].short_effect %>
+            </li>
+        <% }) %>
+    </ul>
+    <a href="/">Retorne a lista</a>
+</body>
+</html>
